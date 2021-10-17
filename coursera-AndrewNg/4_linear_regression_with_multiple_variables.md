@@ -30,8 +30,7 @@
 
 - **Gradient descent**:
   $$
-  \theta_j:=\theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta_0, \theta_1,\dots,, \theta_n)\\
-  :=\theta_j - \alpha\frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}\\
+  \theta_j:=\theta_j - \alpha\frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}\\
   (for\ every\ j=0,\dots,n)
   $$
   
@@ -78,7 +77,6 @@
   more\ reasonable: h_\theta(x)=\theta_0+\theta_1(size)+\theta_2\sqrt{(size)}
   $$
 
-- 
 
 ---
 
@@ -100,7 +98,7 @@
   ![image-4-2](./img/4-3.png)
 
 - **Normal equation and non-invertibility**
-  - in Octave: `pinv(X' * X) * X' * y` will have a right  answer even though non-invertible
+  - in Octave: `pinv(X'*X)*X'*y` will have a right  answer even though non-invertible
   - common cause: 
     - redundant features: x1(size in feet), x2(size in m)
     - too many features: 10 samples with 100 features
